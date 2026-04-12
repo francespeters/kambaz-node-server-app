@@ -1,4 +1,6 @@
 import express from 'express';
+import mongoose from "mongoose";
+
 import Hello from "./Hello.js"
 import Lab5 from "./Lab5/index.js";
 import cors from "cors";
@@ -39,6 +41,9 @@ if (process.env.SERVER_ENV !== "development") {
   };
 }
 app.use(session(sessionOptions));
+
+const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz"
+mongoose.connect(CONNECTION_STRING);
 
 app.use(express.json());
 
