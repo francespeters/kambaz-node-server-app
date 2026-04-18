@@ -14,6 +14,8 @@ import CourseRoutes from "./kambaz/courses/routes.js";
 import ModulesRoutes from "./kambaz/modules/routes.js";
 import AssignmentsRoutes from "./kambaz/assignments/routes.js";
 import EnrollmentsRoutes from "./kambaz/enrollments/routes.js";
+import QuizzesRoutes from './kambaz/quizzes/routes.js';
+import AttemptsRoutes from './kambaz/attempts/routes.js';
 
 
 
@@ -51,6 +53,8 @@ UserRoutes(app);
 CourseRoutes(app);
 ModulesRoutes(app);
 AssignmentsRoutes(app );
+QuizzesRoutes(app);
+AttemptsRoutes(app);
 EnrollmentsRoutes(app);
 Lab5(app);
 Hello(app)
